@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Githmi Punchihewa</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #00796b, #004d40);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        .intro {
+            flex: 1;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #b2dfdb;
+            margin-top: -10px;
+        }
+
+        h2 {
+            color: #00796b;
+        }
+
+        /* Timeline Styling */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #00796b;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #00796b;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .timeline-content {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .timeline-content img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card {
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline-primary {
+            border-color: #00796b;
+            color: #00796b;
+        }
+
+        .btn-outline-primary:hover {
+            background: #00796b;
+            color: #fff;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #00796b, #004d40);
+        }
+
+        /* Stats section */
+        .stats {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .stats .card {
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 40px;
+            }
+
+            .timeline-item::before {
+                left: 10px;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header data-aos="fade-down">
+        <img src="profilepic.jpg" alt="My Photo" class="profile-pic" data-aos="zoom-in">
+        <div class="intro">
+            <h1 class="fw-bold" data-aos="fade-right">My Portfolio</h1>
+            <p class="subtitle" data-aos="fade-right">Undergraduate of Applied Data Science and Communication</p>
+            <p data-aos="fade-right">Hi! I'm Githmi Punchihewa, passionate about data analysis and effective communication. I enjoy working on projects that make a difference and collaborating with diverse teams. I'm also active on social media platforms and enjoy learning new tech tools!</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- Resume Section -->
+        <section class="mb-5" data-aos="fade-right">
+            <h2>1. Resume / CV</h2>
+            <a class="btn btn-outline-primary" href="https://your-sharepoint-link-to-resume" target="_blank">View My Resume</a>
+        </section>
+
+        <!-- Work Samples -->
+        <section class="mb-5" data-aos="fade-left">
+            <h2>2. Work Samples</h2>
+            <div class="list-group">
+                <a href="https://kduac-my.sharepoint.com/:b:/g/personal/40-adc-0005_kdu_ac_lk/Eakt66PCNHxPomeHJcCbsOMBA8V98x5gOJHaxjDA4R8c5Q?e=wm66T8" class="list-group-item list-group-item-action">Assignment for Second Semester</a>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="mb-5 position-relative timeline" data-aos="fade-up">
+            <h2>3. Biography / Career Summary</h2>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <img src="https://via.placeholder.com/60" alt="Visakha">
+                    <div><strong>2008:</strong> Started primary education at Visakha Vidyalaya Colombo 05</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <img src="https://via.placeholder.com/60" alt="O/L">
+                    <div><strong>2018:</strong> Sat for the Ordinary Level exam</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <img src="https://via.placeholder.com/60" alt="A/L">
+                    <div><strong>2021/22:</strong> Sat for the Advanced Level Examination in Commerce stream</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <img src="https://via.placeholder.com/60" alt="Internship">
+                    <div><strong>2022 (Mar - Sep):</strong> Interned at Sampath Bank Strategic Planning Department</div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <img src="https://via.placeholder.com/60" alt="KDU">
+                    <div><strong>2023 - 2025:</strong> Undergraduate in Applied Data Science Communication at KDU</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-5" data-aos="fade-up" data-aos-delay="100">
+            <h2>4. Skills</h2>
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <div class="card shadow-sm text-center p-3">
+                        <p>Data Analysis</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm text-center p-3">
+                        <p>Communication</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm text-center p-3">
+                        <p>Strategic Planning</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card shadow-sm text-center p-3">
+                        <p>Python, SQL, R, Machine Learning, Power BI, Excel</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="mb-5" data-aos="fade-up">
+            <h2>5. My Stats</h2>
+            <div class="stats">
+                <div class="card shadow-sm">
+                    <h4>Projects</h4>
+                    <p>06 Completed</p>
+                </div>
+                <div class="card shadow-sm">
+                    <h4>Experience</h4>
+                    <p>2+ Years</p>
+                </div>
+                <div class="card shadow-sm">
+                    <h4>Team Collaboration</h4>
+                    <p>Worked with 15+ teammates</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="mb-5" data-aos="fade-up">
+            <h2>6. Contact Information</h2>
+            <p>Email: your.email@example.com</p>
+            <p>Phone: +94-XXX-XXXXXXX</p>
+        </section>
+
+        <!-- Social Links -->
+        <section class="mb-5" data-aos="fade-up">
+            <h2>7. Social Media Links</h2>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="btn btn-outline-primary">LinkedIn</a>
+        </section>
+    </main>
+
+    <footer class="text-white text-center py-4">
+        &copy; 2025 Githmi Punchihewa. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+
+</html>
